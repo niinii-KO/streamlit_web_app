@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-USERINFO = 'data/UserInfo.csv'
-IDEA_TABLE = 'data/Idea_table.csv'
+USERINFO = './data/UserInfo.csv'
+IDEA_TABLE = './data/Idea_table.csv'
 def Check_User(USERINFO_,ID,PW):
     df = pd.read_csv(USERINFO_)
     df_part = df[df['ID'] == ID]
