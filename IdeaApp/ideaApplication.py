@@ -3,8 +3,8 @@ import pandas as pd
 
 USERINFO = 'data/UserInfo.csv'
 IDEA_TABLE = 'data/Idea_table.csv'
-def Check_User(USERINFO,ID,PW):
-    df = pd.read_csv(USERINFO)
+def Check_User(USERINFO_,ID,PW):
+    df = pd.read_csv(USERINFO_)
     df_part = df[df['ID'] == ID]
     df_part = df_part.values.tolist()[0]
     #print(df_part)
