@@ -6,6 +6,7 @@ USERINFO = './IdeaApp/data/UserInfo.csv'
 IDEA_TABLE = './IdeaApp/data/Idea_table.csv'
 LOGO = './IdeaApp/data/KUME_logo.jpg'
 logo_image = Image.open(LOGO)
+st.image(logo_image)
 def Check_User(USERINFO_,ID,PW):
     df = pd.read_csv(USERINFO_)
     df_part = df[df['ID'] == ID]
@@ -79,7 +80,6 @@ isLogined,ID,PW, isAdmin = st.session_state.User
 #print(f"ID={ID},PW={PW}")
 if isLogined:
     st.success("ログインに成功しました")
-    st.image(logo_image)
     st.header("Idea入力画面")
     st.caption(f"{ID}さん、Ideaを入力してください")
     with st.form(key='Idea_form'):
